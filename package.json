@@ -12,6 +12,16 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "^5.2.1"
-  }
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akashking7/Flames-game-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Akashking7/Flames-game-app/issues"
+  },
+  "homepage": "https://github.com/Akashking7/Flames-game-app#readme"
 }

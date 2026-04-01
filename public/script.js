@@ -56,3 +56,8 @@ function calculateFlames(n1, n2) {
 
   return map[flames[0]];
 }
+
+app.get("/results", async (req, res) => {
+  const data = await pool.query("SELECT * FROM results ORDER BY id DESC");
+  res.json(data.rows);
+});
