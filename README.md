@@ -60,7 +60,7 @@ app.post("/save") = API endpoint
 It receives data from frontend
 It processes and stores data in DB
 
-================
+====================
 
 Important Tips
 Use .env file for DB credentials (never push secrets)
