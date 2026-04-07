@@ -7,7 +7,14 @@ const map = {
   E: "Enemies",
   S: "Siblings"
 };
-
+const explanationMap = {
+Friends: "👬 A comfortable bond built on trust, laughter, and good vibes. Besties without romance.",
+Love: "❤️ A deep emotional connection filled with care, attraction, and strong feelings for each other.",
+Affection: "😊 Cute connection. Not love yet, but definitely something there.",
+Marriage: "💍 A perfect match! Strong understanding and compatibility for a long-term future together.",
+Enemies: "😡 Lots of clashes and misunderstandings. Opposite energies that don’t get along well.",
+Siblings: "👨‍👩‍👧 A caring and protective bond, just like family. Pure, playful, and supportive."
+};
 // Emoji map to add emojis on frontend only
 function formatResult(result) {
   const emojiMap = {
@@ -64,6 +71,11 @@ document.getElementById("checkBtn").addEventListener("click", async () => {
   // Show result with emoji on UI
   document.getElementById("result").innerText = formattedResult;
 
+  // Update result title
+document.getElementById("result").innerText = "Result: " + formattedResult;
+
+// Update explanation
+document.getElementById("description").innerText = explanationMap[result];
   // Send plain result (without emoji) to backend/DB
   await fetch("/save", {
     method: "POST",

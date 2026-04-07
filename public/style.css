@@ -1,53 +1,218 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
-    font-family: Arial;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(to right, #667eea, #764ba2);
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column; /* 🔥 ALWAYS STACK */
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    justify-content: center;
+    flex: 1; /* pushes footer to bottom */
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.left {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+.left h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+    color: #ffffff;
+
+    text-shadow:
+        2px 2px 0 #5a67d8,
+        4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f1f1f1;
+}
 .container {
     background: white;
-    padding: 30px;
-    border-radius: 15px;
+    padding: 20px;
     width: 90%;
-    max-width: 400px;
+    max-width: 700px;
+    /* allows it to grow on big screens */
+    border-radius: 15px;
     text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
     margin-bottom: 20px;
+    color: #333;
 }
-
+.container h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #4f6381;
+    /* darker than before */
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* adds clean spacing */
+}
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+}
 .inputs {
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 .inputs input {
-    flex: 1;
-    padding: 10px;
-    font-size: 16px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+.inputs input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
 }
 
 button {
-    padding: 10px 20px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
     border: none;
-    background: #ee0979;
+    background: #5a6ee1;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 8px;
+    margin-top: 15px;
+    /* 🔥 ADD THIS */
 }
 
 button:hover {
-    background: #ff6a00;
+    background: #5a67d8;
 }
 
-#result {
+.result {
     margin-top: 20px;
-    color: #333;
+    padding: 20px;
+    width: 100%;
+    background: #f7f7f7;
+    border-radius: 10px;
+}
+
+.result h2 {
+    color: #444;
+}
+
+.result p {
+    font-size:  15px;
+    color: #262525;
+    /* darker for better readability */
+    font-weight: 500;
+}
+.footer {
+    text-align: center;
+    color: rgb(6, 1, 21);
+    font-size: 14px;
+    padding: 20px;
+}
+.footer{
+    background-color: #c4e2da;
+}
+.footer .links {
+    margin-top: 10px;
+}
+
+.footer .email {
+    margin-top: 10px;
+}
+
+@media (min-width: 1024px) {
+    .left {
+            max-width: 800px;
+        }
+
+        .left h1 {
+            font-size: 42px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+        }
+    .container {
+        max-width: 900px;
+    }
+
+    .result {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        /* 🔥 THIS FIXES YOUR ISSUE */
+        text-align: center;
+    }
+
+    .left {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .inputs {
+        flex-direction: column;
+    }
+
+    .inputs input {
+        width: 100%;
+    }
+}
+@media (min-width: 769px) {
+    .inputs {
+        flex-direction: column;
+        /* stack like button */
+        width: 100%;
+    }
+
+    .inputs input {
+        width: 100%;
+        /* full width like button */
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
 }

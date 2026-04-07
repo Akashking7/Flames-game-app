@@ -2,24 +2,64 @@
 <html>
 
 <head>
-    <title>FLAMES Game</title>
+    <title>Flames App</title>
     <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Poppins:wght@500;700&family=Orbitron:wght@600&display=swap"
+        rel="stylesheet">
 </head>
-
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
 <body>
 
-    <div class="container">
-        <h1>🔥 FLAMES Game</h1>
+    <div class="wrapper">
 
-        <div class="inputs">
-            <input type="text" id="name1" placeholder="Enter Name 1">
-            <input type="text" id="name2" placeholder="Enter Name 2">
+        <!-- LEFT SECTION (TOP ON MOBILE) -->
+        <div class="left">
+            <h1>Flames Game 🔥</h1>
+            <h2><p class="subtitle">
+                Discover your relationship in a fun way! 😄 <br />
+                <span>Just for entertainment — don’t take it seriously 😉</span>
+            </p></h2>
         </div>
 
-        <button id="checkBtn">Check Relationship</button>
+        <!-- RIGHT SECTION (GAME CARD) -->
+        <div class="container">
+            <h1>Flames Game🔥</h1>
 
-        <h2 id="result"></h2>
+            <div class="inputs">
+                <input id="name1" type="text" placeholder="Enter Name 1">
+                <input id="name2" type="text" placeholder="Enter Name 2">
+            </div>
+
+            <button id="checkBtn">Check Relationship</button>
+
+            <div class="result">
+                <h2 id="result">Result: Friends</h2>
+                <p id="description">
+                    Friends – Represents a friendly relationship with no romantic connection.
+                </p>
+            </div>
+        </div>
+
     </div>
+
+<footer class="footer">
+    <h2>Created by Akash S</h2>
+
+    <div class="links">
+        Github:
+        <a href="https://github.com/Akashking7/Flames-game-app.git">GitHub</a> |
+        Linkedin:
+        <a href="https://www.linkedin.com/in/akash-s-b6166a253/">LinkedIn</a>
+    </div>
+
+    <div class="email">
+        Email:
+        <a href="mailto:akashsubramani2002@gmail.com">
+            akashsubramani2002@gmail.com
+        </a>
+    </div>
+</footer>
 
     <script src="script.js"></script>
 </body>
