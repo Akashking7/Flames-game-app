@@ -82,3 +82,4 @@ If you want, next step I can:
 
 i am going to add security 
 i am going to make a admin separate and user 
+it takes time so .. i sorry 
