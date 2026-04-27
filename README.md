@@ -1,4 +1,4 @@
-# Flames-game-app
+### Flames-game-app
 🚀 Just deployed my FLAMES Game Project!
 
 Built using:
